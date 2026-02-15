@@ -36,4 +36,4 @@
 - And I'll proceed to never touch the project again
 - Thanks for looking at my profile! 👋
 
-Thanks to [Quicksilver151](https://github.com/Quicksilver151) for README inspiration!
+Thanks to [Quicksilver151](https://github.com/Quicksilver151) for README inspiration! And sorry if I stole your vercel readme stats lol :)
