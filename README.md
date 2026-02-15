@@ -1,2 +1,2 @@
 # itsant
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=itsant)](https://github.com/anuraghazra/github-readme-stats)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=Anthony-Maxwell1)](https://git.io/streak-stats)
