@@ -5,11 +5,9 @@
   </a>
 </p>
 
-<p align="center">
-  
 ![Stats](./profile/stats.svg)
-
-</p>
+![Top Languages](./profile/top-langs.svg)
+![Pinned](./profile/pin-readme-tools-github-readme-stats.svg)
 
 - I'm anthony
 - I'll randomly find a project or get frustrated at something and then get an idea
