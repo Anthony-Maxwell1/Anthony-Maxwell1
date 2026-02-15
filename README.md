@@ -15,14 +15,14 @@
   </br>
   
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats-333y.vercel.app/api?username=Anthony-Maxwell1&theme=tokyonight&hide_border=true&card_width=495">
+    <img src="https://github-readme-stats-a0mci4cdu-anthony-maxwell1s-projects.vercel.app/api?username=Anthony-Maxwell1&theme=tokyonight&hide_border=true&card_width=495">
   </a>
    
   </br>
   </br>
 
  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src=https://github-readme-stats-333y.vercel.app/api/top-langs/?username=Anthony-Maxwell1&hide_border=true&langs_count=4&show_icons=true&card_width=495&theme=tokyonight>
+    <img src=https://github-readme-stats-a0mci4cdu-anthony-maxwell1s-projects.vercel.app/api/top-langs/?username=Anthony-Maxwell1&hide_border=true&langs_count=4&show_icons=true&card_width=495&theme=tokyonight>
   
   </br>
   </br>
