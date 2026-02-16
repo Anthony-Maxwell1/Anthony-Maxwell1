@@ -1,5 +1,5 @@
-import WeatherTile from "./components/WeatherTile";
-import ClockTile from "./components/ClockTile";
+import AboutMe from "./components/AboutMe";
+import Stats from "./components/Stats";
 
 export const tw = (classes) => classes;
 
@@ -327,11 +327,21 @@ export const currentPage = {
   tiles: [
     {
       id: "8f1b5345-7fcf-4571-b248-6fab5cf4be72",
-      registryId: "clock",
-      x: 6,
-      y: 1,
-      w: 8,
-      h: 5,
+      registryId: "aboutme",
+      x: 0.5,
+      y: 0.5,
+      w: 10,
+      h: 7,
+      props: {},
+      specialEffects: ["topBar"],
+    },
+    {
+      id: "8f1b5345-7fcf-4571-b248-asjfdoajfioidsfj",
+      registryId: "stats",
+      x: 10,
+      y: 3.5,
+      w: 9.5,
+      h: 6,
       props: {},
       specialEffects: ["topBar"],
     },
@@ -344,15 +354,15 @@ export const TileRegistry = [
     label: "Information",
     children: [
       {
-        id: "clock",
-        label: "Clock",
-        component: ClockTile,
+        id: "aboutme",
+        label: "bash: aboutme -user anthony_maxwell",
+        component: AboutMe,
         defaultProps: {},
       },
       {
-        id: "weather",
-        label: "Weather",
-        component: WeatherTile,
+        id: "stats",
+        label: "cmd: im_better_than_you.exe",
+        component: Stats,
         defaultProps: {},
       },
     ],
