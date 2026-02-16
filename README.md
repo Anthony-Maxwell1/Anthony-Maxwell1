@@ -14,6 +14,8 @@
 <p align="center">
   <img src="./profile/stats.svg" alt="Stats" />
   <img src="./profile/top-langs.svg" alt="Top Languages" />
+  <br />
+*excluding forks, ruling out my android ports of arduino-cli, esptool and eventually avrdude and their corresponding cores
 </p>
 
 <p align="center">
