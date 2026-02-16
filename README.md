@@ -22,4 +22,9 @@
   <br />
   <img src="/profile/stats.svg" />
   <img src="/profile/top-langs.svg" />
+  <img
+  alt=""
+  src="https://streak-stats.demolab.com/?user=Anthony-Maxwell1"
+/>
 </div>
+
