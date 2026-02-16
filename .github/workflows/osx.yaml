@@ -1,0 +1,58 @@
+name: Build and Screenshot
+
+on: [push]
+
+jobs:
+  build-screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependancies and Build
+        run: |
+          cd resources/code/osx
+          npm install
+          npm run build
+
+      - name: Install serve
+        run: npm install -g serve
+
+      - name: Serve App And Screenshot
+        run: |
+          serve -s build -l 3000 &
+          # Wait for server to start
+          npx wait-on http://localhost:3000
+
+          # cd to proper folder
+          cd ../../../profile
+
+          # Take screenshot after waiting for animation
+          node -e "
+          const puppeteer = require('puppeteer');
+          (async () => {
+            const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+            const page = await browser.newPage();
+            await page.setViewport({ width: 1740, height: 966 });
+
+            await page.goto('http://localhost:3000', { waitUntil: 'networkidle0' });
+
+            // wait 2s for startup animation
+            await new Promise(r => setTimeout(r, 2000));
+
+            await page.screenshot({ path: 'screenshot.png' });
+            await browser.close();
+          })();
+          "
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.png
+          git commit -m "Update webpage screenshot" || exit 0
+          git push

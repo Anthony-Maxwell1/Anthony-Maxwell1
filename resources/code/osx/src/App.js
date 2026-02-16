@@ -1,4 +1,5 @@
 import { classes, topBar, extraHtml, currentPage, gridSize, TileRegistry } from "./conf.js";
+import { useEffect } from "react";
 
 const findRegistry = (id, nodes) => {
     for (const n of nodes) {
@@ -11,7 +12,16 @@ const findRegistry = (id, nodes) => {
     return null;
 };
 
+function getViewportSize() {
+  const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  return { width: width, height: height };
+}
+
 export default function DashboardPage() {
+  useEffect(() => {
+    console.log(getViewportSize())
+  })
   return (
     <div className="h-screen flex">
       {/* Dashboard */}
