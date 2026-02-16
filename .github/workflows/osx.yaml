@@ -12,27 +12,30 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20   # upgrade from 18 (avoids joi engine warnings)
 
-      - name: Install Dependancies and Build
+      - name: Install Dependencies and Build
         run: |
           cd resources/code/osx
           npm install
-          npm run build
+          CI=false npm run build
 
-      - name: Install serve
-        run: npm install -g serve
+      - name: Install serve + puppeteer
+        run: |
+          npm install -g serve
+          npm install puppeteer wait-on
 
       - name: Serve App And Screenshot
         run: |
-          serve -s build -l 3000 &
-          # Wait for server to start
+          # serve the ACTUAL build folder
+          serve -s resources/code/osx/build -l 3000 &
+
+          # wait until site responds with 200
           npx wait-on http://localhost:3000
 
-          # cd to proper folder
-          cd ../../../profile
+          # go to profile folder where screenshot should be saved
+          cd profile
 
-          # Take screenshot after waiting for animation
           node -e "
           const puppeteer = require('puppeteer');
           (async () => {
@@ -42,13 +45,14 @@ jobs:
 
             await page.goto('http://localhost:3000', { waitUntil: 'networkidle0' });
 
-            // wait 2s for startup animation
+            // wait for SVG intro animation
             await new Promise(r => setTimeout(r, 2000));
 
             await page.screenshot({ path: 'screenshot.png' });
             await browser.close();
           })();
           "
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
