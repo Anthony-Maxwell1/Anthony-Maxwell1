@@ -85,7 +85,10 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="ml-2 mr-2 p-3 rounded-lg bg-gray-900 text-gray-100">
-        <img src="https://skillicons.dev/icons?i=arch,arduino,cs,cloudflare,discord,gcp,git,github,gmail,go,grafana,html,htmx,js,kotlin,lua,md,nextjs,nginx,nodejs,notion,npm,py,raspberrypi,react,replit,ts,unity,robloxstudio,vscode&perline=15" />
+        <img
+          alt=""
+          src="https://skillicons.dev/icons?i=arch,arduino,cs,cloudflare,discord,gcp,git,github,gmail,go,grafana,html,htmx,js,kotlin,lua,md,nextjs,nginx,nodejs,notion,npm,py,raspberrypi,react,replit,ts,unity,robloxstudio,vscode&perline=15"
+        />
       </div>
     </div>
   );
