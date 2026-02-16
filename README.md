@@ -7,15 +7,15 @@
 
 <p align="center">
   <a href="https://thatdev.org" target="_blank">
-    <img src="https://img.shields.io/badge/visit%20me-thatdev.org-red?style=for-the-badge&logo=googlechrome&logoColor=fc1818" alt="Visit thatdev.org" />
+    <img src="https://img.shields.io/badge/visit%20me-thatdev.org-red?style=for-the-badge&logo=googlechrome&logoColor=red" alt="Visit thatdev.org" />
   </a>
 
   <a href="https://github.com/Anthony-Maxwell1/schoolm8" target="_blank">
-    <img src="https://img.shields.io/badge/pinned%20repo-schoolm8-blue?style=for-the-badge&logo=googlechrome&logoColor=fc1818" alt="schoolm8 repo" />
+    <img src="https://img.shields.io/badge/pinned%20repo-schoolm8-blue?style=for-the-badge&logo=github&logoColor=blue" alt="schoolm8 repo" />
   </a>
 
   <a href="https://github.com/Anthony-Maxwell1/ArduinoBuddy" target="_blank">
-    <img src="https://img.shields.io/badge/pinned%20repo-ArduinoBuddy-green?style=for-the-badge&logo=googlechrome&logoColor=fc1818" alt="ArduinoBuddy repo" />
+    <img src="https://img.shields.io/badge/pinned%20repo-ArduinoBuddy-green?style=for-the-badge&logo=github&logoColor=green" alt="ArduinoBuddy repo" />
   </a>
 </p>
 
