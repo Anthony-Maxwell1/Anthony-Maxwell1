@@ -6,8 +6,16 @@
 </p>
 
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=arch,arduino,cs,cloudflare,discord,firebase,gcp,git,github,gmail,go,grafana,html,htmx,js,kotlin,lua,md,nextjs,nginx,nodejs,notion,npm,py,raspberrypi,react,replit,ts,unity,robloxstudio,vscode&perline=50" />
+  <a href="https://thatdev.org" target="_blank">
+    <img src="https://img.shields.io/badge/visit%20me-thatdev.org-red?style=for-the-badge&logo=googlechrome&logoColor=fc1818" alt="Visit thatdev.org" />
+  </a>
+
+  <a href="https://github.com/Anthony-Maxwell1/schoolm8" target="_blank">
+    <img src="https://img.shields.io/badge/pinned%20repo-schoolm8-blue?style=for-the-badge&logo=googlechrome&logoColor=fc1818" alt="schoolm8 repo" />
+  </a>
+
+  <a href="https://github.com/Anthony-Maxwell1/ArduinoBuddy" target="_blank">
+    <img src="https://img.shields.io/badge/pinned%20repo-ArduinoBuddy-green?style=for-the-badge&logo=googlechrome&logoColor=fc1818" alt="ArduinoBuddy repo" />
   </a>
 </p>
 
@@ -20,20 +28,33 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,robloxstudio,unity,ts,replit,react,raspberrypi,py,npm,notion,nodejs,nginx,nextjs,md,lua,kotlin,js,htmx,html,grafana,go,gmail,github,git,gcp,firebase,discord,cloudflare,cs,arduino,arch&perline=50" />
+    <img src="https://skillicons.dev/icons?i=arch,arduino,cs,cloudflare,discord,firebase,gcp,git,github,gmail,go,grafana,html,htmx,js,kotlin,lua,md,nextjs,nginx,nodejs,notion,npm,py,raspberrypi,react,replit,ts,unity,robloxstudio,vscode&perline=50" />
   </a>
 </p>
 
 ---
 
+
 ## 👋 Hi, I'm Anthony!
-
 <details open>
-<summary>About Me</summary>
-
-- I randomly find a project, or get frustrated at something, then get an idea 💡  
-- I get obsessed for a month 😅  
+<summary>About me</summary>
+  
+```
+- I randomly find a project, or get frustrated at something, then get an idea   
+- I get obsessed for a month 
 - I rarely touch the project again afterward  
-- Thanks for checking out my profile! 🙏
+- Thanks for checking out my profile! 
+```
 
 </details>
+
+<details open>
+<summary>My Current Projects</summary>
+
+```
+- schoolm8 - A tool to organise all your school tools into one with AI and schedules
+- ArduinoBuddy - A tool that lets you program arduion and esp32 on your device.
+- arduino-cli_arduinobuddyfork - A port of arduino-cli to work in a shared library for android. Part of ArduinoBuddy
+- esptool-arduinobuddy_fork - A port of esptool to run in a shared library for andriod part of ArduinoBuddy.
+- Planned is porting avrdudde and the esp32 and arduino cores to shared libraries.
+```
