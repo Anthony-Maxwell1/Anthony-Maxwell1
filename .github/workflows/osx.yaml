@@ -1,6 +1,9 @@
 name: Build and Screenshot
 
-on: [push]
+on:
+  schedule:
+    - cron: "15 0 * * *" # Runs once daily at midnight
+  workflow_dispatch:
 
 jobs:
   build-screenshot:
