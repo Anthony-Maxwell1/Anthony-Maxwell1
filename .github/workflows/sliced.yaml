@@ -52,6 +52,9 @@ jobs:
           })();
           "
 
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
       - name: Slice screenshot into 20x10 tiles
         run: |
           cd profile
