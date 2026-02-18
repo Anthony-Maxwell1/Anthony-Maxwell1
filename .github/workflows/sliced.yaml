@@ -70,54 +70,54 @@ jobs:
       - name: Generate README pixel grid
         run: |
           python << 'EOF'
-import os
-
-cols = 20
-rows = 10
-
-tiles_dir = "profile/tiles"
-tiles = sorted(os.listdir(tiles_dir))
-tiles = [t for t in tiles if t.endswith(".png")]
-
-html = []
-html.append("<!-- PIXEL_GRID_START -->")
-
-i = 0
-for y in range(rows):
-    html.append('<p align="center">')
-    for x in range(cols):
-        tile = tiles[i]
-        html.append(f'  <img src="profile/tiles/{tile}" width="24" />')
-        i += 1
-    html.append("</p>")
-
-html.append("<!-- PIXEL_GRID_END -->")
-
-grid_block = "\n".join(html)
-
-readme_path = "READMETest.md"
-
-if os.path.exists(readme_path):
-    with open(readme_path, "r", encoding="utf-8") as f:
-        content = f.read()
-else:
-    content = ""
-
-start = "<!-- PIXEL_GRID_START -->"
-end = "<!-- PIXEL_GRID_END -->"
-
-if start in content and end in content:
-    before = content.split(start)[0]
-    after = content.split(end)[1]
-    new_content = before + grid_block + after
-else:
-    new_content = content + "\n\n" + grid_block
-
-with open(readme_path, "w", encoding="utf-8") as f:
-    f.write(new_content)
-
-print("README grid updated")
-EOF
+          import os
+          
+          cols = 20
+          rows = 10
+          
+          tiles_dir = "profile/tiles"
+          tiles = sorted(os.listdir(tiles_dir))
+          tiles = [t for t in tiles if t.endswith(".png")]
+          
+          html = []
+          html.append("<!-- PIXEL_GRID_START -->")
+          
+          i = 0
+          for y in range(rows):
+              html.append('<p align="center">')
+              for x in range(cols):
+                  tile = tiles[i]
+                  html.append(f'  <img src="profile/tiles/{tile}" width="24" />')
+                  i += 1
+              html.append("</p>")
+          
+          html.append("<!-- PIXEL_GRID_END -->")
+          
+          grid_block = "\n".join(html)
+          
+          readme_path = "READMETest.md"
+          
+          if os.path.exists(readme_path):
+              with open(readme_path, "r", encoding="utf-8") as f:
+                  content = f.read()
+          else:
+              content = ""
+          
+          start = "<!-- PIXEL_GRID_START -->"
+          end = "<!-- PIXEL_GRID_END -->"
+          
+          if start in content and end in content:
+              before = content.split(start)[0]
+              after = content.split(end)[1]
+              new_content = before + grid_block + after
+          else:
+              new_content = content + "\n\n" + grid_block
+          
+          with open(readme_path, "w", encoding="utf-8") as f:
+              f.write(new_content)
+          
+          print("README grid updated")
+          EOF
 
       - name: Commit and push if changed
         run: |
