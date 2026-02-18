@@ -1,0 +1,134 @@
+name: Build and Screenshot
+
+on:
+  schedule:
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build-screenshot:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies and Build
+        run: |
+          cd resources/code/osx
+          npm install
+          CI=false npm run build
+
+      - name: Install serve + puppeteer
+        run: |
+          npm install -g serve
+          npm install puppeteer wait-on
+
+      - name: Serve App And Screenshot
+        run: |
+          serve -s resources/code/osx/build -l 3000 &
+          npx wait-on http://localhost:3000
+
+          cd profile
+
+          node -e "
+          const puppeteer = require('puppeteer');
+          (async () => {
+            const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+            const page = await browser.newPage();
+            await page.setViewport({ width: 1740, height: 966 });
+            await page.goto('http://localhost:3000', { waitUntil: 'networkidle0' });
+            await new Promise(r => setTimeout(r, 2000));
+            await page.screenshot({ path: 'screenshot.png' });
+            await browser.close();
+          })();
+          "
+
+      - name: Slice screenshot into 20x10 tiles
+        run: |
+          cd profile
+          mkdir -p tiles
+
+          INPUT="screenshot.png"
+
+          WIDTH=$(identify -format "%w" $INPUT)
+          HEIGHT=$(identify -format "%h" $INPUT)
+
+          TILE_W=$((WIDTH / 20))
+          TILE_H=$((HEIGHT / 10))
+
+          convert $INPUT -crop ${TILE_W}x${TILE_H} +repage +adjoin tiles/tile_%03d.png
+
+      - name: Generate README pixel grid
+        run: |
+          python << 'EOF'
+import os
+
+cols = 20
+rows = 10
+
+tiles_dir = "profile/tiles"
+tiles = sorted(os.listdir(tiles_dir))
+tiles = [t for t in tiles if t.endswith(".png")]
+
+html = []
+html.append("<!-- PIXEL_GRID_START -->")
+
+i = 0
+for y in range(rows):
+    html.append('<p align="center">')
+    for x in range(cols):
+        tile = tiles[i]
+        html.append(f'  <img src="profile/tiles/{tile}" width="24" />')
+        i += 1
+    html.append("</p>")
+
+html.append("<!-- PIXEL_GRID_END -->")
+
+grid_block = "\n".join(html)
+
+readme_path = "READMETest.md"
+
+if os.path.exists(readme_path):
+    with open(readme_path, "r", encoding="utf-8") as f:
+        content = f.read()
+else:
+    content = ""
+
+start = "<!-- PIXEL_GRID_START -->"
+end = "<!-- PIXEL_GRID_END -->"
+
+if start in content and end in content:
+    before = content.split(start)[0]
+    after = content.split(end)[1]
+    new_content = before + grid_block + after
+else:
+    new_content = content + "\n\n" + grid_block
+
+with open(readme_path, "w", encoding="utf-8") as f:
+    f.write(new_content)
+
+print("README grid updated")
+EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add profile/tiles/
+          git add profile/screenshot.png
+          git add READMETest.md
+
+          git diff --cached --quiet && echo "No changes" && exit 0
+
+          git commit -m "Auto-update screenshot grid"
+          git push
