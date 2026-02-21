@@ -5,8 +5,8 @@
     alt="Badge"
   /></a>
   <br />
-  <a href="https://https://discordapp.com/users/itsant__"><img
-    src="https://img.shields.io/badge/discord-itsant__-orange?style=plastic&logo=discord"
+  <a href="https://discordapp.com/users/itsant__"><img
+    src="https://img.shields.io/badge/discord-itsant____-orange?style=plastic&logo=discord"
     alt="Badge"
   /></a>
   <br />
