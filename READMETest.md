@@ -1,8 +1,7 @@
 
 
 <!-- PIXEL_GRID_START -->
-<table align="center" cellspacing="0" cellpadding="0" >  
-<tr><td align="center">
+<p align="center">
   <img src="profile/tiles/tile_000.png" width="24" />
   <img src="profile/tiles/tile_001.png" width="24" />
   <img src="profile/tiles/tile_002.png" width="24" />
@@ -23,8 +22,8 @@
   <img src="profile/tiles/tile_017.png" width="24" />
   <img src="profile/tiles/tile_018.png" width="24" />
   <img src="profile/tiles/tile_019.png" width="24" />
-</td></tr>
-<tr><td align="center">
+</p>
+<p align="center">
   <img src="profile/tiles/tile_020.png" width="24" />
   <img src="profile/tiles/tile_021.png" width="24" />
   <img src="profile/tiles/tile_022.png" width="24" />
@@ -45,8 +44,8 @@
   <img src="profile/tiles/tile_037.png" width="24" />
   <img src="profile/tiles/tile_038.png" width="24" />
   <img src="profile/tiles/tile_039.png" width="24" />
-</td></tr>
-<tr><td>
+</p>
+<p align="center">
   <img src="profile/tiles/tile_040.png" width="24" />
   <img src="profile/tiles/tile_041.png" width="24" />
   <img src="profile/tiles/tile_042.png" width="24" />
@@ -67,8 +66,8 @@
   <img src="profile/tiles/tile_057.png" width="24" />
   <img src="profile/tiles/tile_058.png" width="24" />
   <img src="profile/tiles/tile_059.png" width="24" />
-</td></tr>
-<tr><td>
+</p>
+<p align="center">
   <img src="profile/tiles/tile_060.png" width="24" />
   <img src="profile/tiles/tile_061.png" width="24" />
   <img src="profile/tiles/tile_062.png" width="24" />
@@ -89,8 +88,8 @@
   <img src="profile/tiles/tile_077.png" width="24" />
   <img src="profile/tiles/tile_078.png" width="24" />
   <img src="profile/tiles/tile_079.png" width="24" />
-</td></tr>
-<tr><td>
+</p>
+<p align="center">
   <img src="profile/tiles/tile_080.png" width="24" />
   <img src="profile/tiles/tile_081.png" width="24" />
   <img src="profile/tiles/tile_082.png" width="24" />
@@ -111,8 +110,8 @@
   <img src="profile/tiles/tile_097.png" width="24" />
   <img src="profile/tiles/tile_098.png" width="24" />
   <img src="profile/tiles/tile_099.png" width="24" />
-</td></tr>
-<tr><td>
+</p>
+<p align="center">
   <img src="profile/tiles/tile_100.png" width="24" />
   <img src="profile/tiles/tile_101.png" width="24" />
   <img src="profile/tiles/tile_102.png" width="24" />
@@ -133,8 +132,8 @@
   <img src="profile/tiles/tile_117.png" width="24" />
   <img src="profile/tiles/tile_118.png" width="24" />
   <img src="profile/tiles/tile_119.png" width="24" />
-</td></tr>
-<tr><td>
+</p>
+<p align="center">
   <img src="profile/tiles/tile_120.png" width="24" />
   <img src="profile/tiles/tile_121.png" width="24" />
   <img src="profile/tiles/tile_122.png" width="24" />
@@ -155,8 +154,8 @@
   <img src="profile/tiles/tile_137.png" width="24" />
   <img src="profile/tiles/tile_138.png" width="24" />
   <img src="profile/tiles/tile_139.png" width="24" />
-</td></tr>
-<tr><td>
+</p>
+<p align="center">
   <img src="profile/tiles/tile_140.png" width="24" />
   <img src="profile/tiles/tile_141.png" width="24" />
   <img src="profile/tiles/tile_142.png" width="24" />
@@ -177,8 +176,8 @@
   <img src="profile/tiles/tile_157.png" width="24" />
   <img src="profile/tiles/tile_158.png" width="24" />
   <img src="profile/tiles/tile_159.png" width="24" />
-</td></tr>
-<tr><td>
+</p>
+<p align="center">
   <img src="profile/tiles/tile_160.png" width="24" />
   <img src="profile/tiles/tile_161.png" width="24" />
   <img src="profile/tiles/tile_162.png" width="24" />
@@ -199,8 +198,8 @@
   <img src="profile/tiles/tile_177.png" width="24" />
   <img src="profile/tiles/tile_178.png" width="24" />
   <img src="profile/tiles/tile_179.png" width="24" />
-</td></tr>
-<tr><td>
+</p>
+<p align="center">
   <img src="profile/tiles/tile_180.png" width="24" />
   <img src="profile/tiles/tile_181.png" width="24" />
   <img src="profile/tiles/tile_182.png" width="24" />
@@ -221,6 +220,5 @@
   <img src="profile/tiles/tile_197.png" width="24" />
   <img src="profile/tiles/tile_198.png" width="24" />
   <img src="profile/tiles/tile_199.png" width="24" />
-</td></tr>
-</table>
+</p>
 <!-- PIXEL_GRID_END -->
